@@ -3,7 +3,7 @@ github:
 
 channels:
   targets:
-    - [tudat-team, dev]
+    - [tudat-team, main]
 
 conda_forge_output_validation: true
 
