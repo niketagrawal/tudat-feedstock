@@ -1,0 +1,29 @@
+# This workflow receives a repository_dispatch event from the tudat repository about a new version created on the develop branch. It then bumps the version of the tudat-feedstock repository and pushes the changes to the develop branch.
+
+name: Bump Version on Dispatch
+
+on:
+  repository_dispatch:
+    types:
+      - push-to-niketagrawal/tudat-feedstock
+
+jobs:
+  bump-version:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install bump2version
+        run: pip install bump2version
+
+      - name: Bump version
+        run: |
+          git config --global user.email "actions@github.com"
+          git config --global user.name "GitHub Actions"
+          bump2version patch --config-file .bumpversion.cfg --verbose
+
+      - name: Push tag to tuda-feedstock
+        run: git push origin --follow-tags
+        env:
+            GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
