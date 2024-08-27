@@ -23,5 +23,5 @@
 
 *.pyc
 
-!.github/workflows/bump_version_on_dispatch.yml
+!.github/workflows/watch_tudat_bump_version.yml
 !.bumpversion.cfg
