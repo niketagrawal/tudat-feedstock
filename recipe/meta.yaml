@@ -1,10 +1,10 @@
 package:
   name: tudat
-  version: "2.13.0.dev13"
+  version: 2.13.0.dev13
 
 source:
   git_url: https://github.com/tudat-team/tudat.git
-  git_rev: "v2.13.0.dev13"
+  git_rev: v2.13.0.dev13
 
 build:
     # A non-negative integer representing the build number of the package.
