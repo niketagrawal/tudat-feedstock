@@ -24,3 +24,4 @@
 *.pyc
 
 !.github/workflows/bump_version_on_dispatch.yml
+!.bumpversion.cfg
