@@ -1,5 +1,5 @@
 {% set name = "tudat" %}
-  {% set version = "2.13.0.dev14" %}
+  {% set version = "2.13.0.dev13" %}
   {% set build = "0" %}
   {% set git_rev = "v2.13.0.dev13" %}
 
