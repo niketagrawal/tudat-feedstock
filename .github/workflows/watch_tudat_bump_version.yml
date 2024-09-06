@@ -21,7 +21,7 @@ jobs:
         run: |
           git config --global user.email "actions@github.com"
           git config --global user.name "GitHub Actions"
-          bump2version patch --config-file .bumpversion.cfg --verbose
+          bump2version dev --config-file .bumpversion.cfg --verbose
       - name: Push tag to tuda-feedstock
         run: git push origin --follow-tags
         env:
